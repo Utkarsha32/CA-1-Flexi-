@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Layout</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+  } 
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .row {
+    display: flex;
+    flex: 1; 
+  }
+  .box {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-weight: bold;
+    border: 1px solid rgb(90, 236, 68);
+    box-sizing: border-box;
+  }
+ 
+  .top-row {
+    background-color: #46f48f;
+  }
+  .middle-row {
+    background-color: #7382e8;
+  }
+  .bottom-row {
+    background-color: #f95036;
+  }
+  
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column; 
+    }
+    .box {
+      min-height: 80px; 
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row top-row">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="row middle-row">
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="row bottom-row">
+    <div class="box"></div>
+  </div>
+</div>
+
+</body>
+</html>
